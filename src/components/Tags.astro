@@ -1,0 +1,11 @@
+---
+// Props esperados:
+// - icon: un string con el contenido SVG (como raw o slot)
+// - label: texto que aparecerá al lado
+
+const { icon, label } = Astro.props;
+---
+<div class="flex flex-row justify-center items-center gap-2">
+  <div set:html={icon} class="size-6"></div>
+  <span>{label}</span>
+</div>
