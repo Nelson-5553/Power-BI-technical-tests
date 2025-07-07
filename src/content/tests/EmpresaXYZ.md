@@ -5,6 +5,8 @@
     time: 30 min
     archives: 
         - /resource/empresaxyz.xlsx
+    solution:
+        - /solution/empresaxyz.png
     mainAdvantage: 
         - Visualizaciones            
         - KPIs            
