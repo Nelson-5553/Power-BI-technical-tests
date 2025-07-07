@@ -1,31 +1,39 @@
 ---
 const { test } = Astro.props;
----
 
+const difficultyColors = {
+  Basico: 'green',
+  Intermedio: 'yellow',
+  Avanzado: 'purple'
+};
+const diffClass = difficultyColors[test.data.dificulty as keyof typeof difficultyColors] ?? 'bg-gray-100 text-gray-800';
+---
 <div class="mx-auto w-full py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
   <!-- Tarjeta 1: Duración Estimada -->
-   <div class="relative z-10 bg-white rounded-xl ">
-  <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-    <svg class="w-12 h-12 mx-auto text-blue-600 mb-4" fill="none" stroke="currentColor" stroke-width="1.5"
-      viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        d="M12 6v6l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-    <div class="text-3xl font-bold text-blue-800 mb-2">{test.data.time}</div>
-    <div class="text-blue-600 font-medium">Duración Estimada</div>
-  </div>
+  <div class="relative z-10 bg-white rounded-xl ">
+    <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+      <svg class="w-12 h-12 mx-auto text-blue-600 mb-4" fill="none" stroke="currentColor" stroke-width="1.5"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 6v6l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <div class="text-3xl font-bold text-blue-800 mb-2">{test.data.time}</div>
+      <div class="text-blue-600 font-medium">Duración Estimada</div>
+    </div>
   </div>
 
   <!-- Tarjeta 2: Nivel de Dificultad -->
-   <div class="relative z-10 bg-white rounded-xl ">
-  <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-    <svg class="w-12 h-12 mx-auto text-purple-600 mb-4" fill="none" stroke="currentColor" stroke-width="1.5"
-      viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        d="M21 12a9 9 0 11-9-9v9h9z" />
-    </svg>
-    <div class="text-3xl font-bold text-purple-800 mb-2">{test.data.dificulty}</div>
-    <div class="text-purple-600 font-medium">Nivel de Dificultad</div>
-  </div>
+  <div class="relative z-10 bg-white rounded-xl ">
+    <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+      <svg class={`w-12 h-12 mx-auto text-${diffClass}-600 mb-4`} fill="none" stroke="currentColor" stroke-width="1.5"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 12a9 9 0 11-9-9v9h9z" />
+      </svg>
+      <div class={`text-3xl font-bold mb-2 inline-block px-4 py-1 rounded-xl text-${diffClass}-600`}>
+        {test.data.dificulty}
+      </div>
+      <div class={`text-${diffClass}-600 font-medium`}>Nivel de Dificultad</div>
+    </div>
   </div>
 </div>
