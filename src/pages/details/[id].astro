@@ -1,5 +1,5 @@
 ---
-import { getCollection, render } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import ContentDetails from "@components/ContentDetails.astro";
 import Summary from "@components/Summary.astro";
@@ -16,7 +16,6 @@ export const getStaticPaths = async () => {
 };
 
 const { test } = Astro.props;
-const { Content } = await render(test);
 ---
 
 <Layout>

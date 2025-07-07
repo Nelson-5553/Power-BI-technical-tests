@@ -5,11 +5,7 @@
     time: 30 min
     color: blue
     archives: 
-        - public/archives/ventas.xlsx
-        - public/archives/ventas.xlsx
-        - public/archives/ventas.xlsx
-    solution: 
-        - public/solution/img.jpg
+        - /resource/empresaxyz.xlsx
     mainAdvantage: 
         - Visualizaciones            
         - KPIs            
