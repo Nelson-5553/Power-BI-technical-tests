@@ -10,26 +10,31 @@ const Tests = await getCollection("tests");
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {
                     Tests.map((test) => (
-                        <a href={`/details/${test.id}`} class="relative z-10 bg-white rounded-xl block">
-                            <div
-                                class="bg-gradient-to-l from-orange-400 to-orange-600 rounded-t-xl h-2"
-                            ></div>
+                        <a
+                            href={`/details/${test.id}`}
+                            class="relative z-10 bg-white rounded-xl block"
+                        >
+                            <div class="bg-gradient-to-l from-orange-400 to-orange-600 rounded-t-xl h-2" />
                             <div class="max-w-md bg-white rounded-b-xl shadow-lg p-6 space-y-4">
                                 <div class="flex items-center gap-4">
-                                    <div
-                                        class="bg-gradient-to-br to-orange-400 from-orange-700 p-3 rounded-xl"
-                                    >
+                                    <div class="bg-gradient-to-br to-orange-400 from-orange-700 text-white p-3 rounded-xl">
                                         <svg
-                                            class="w-6 h-6 text-white"
+                                            xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
                                             viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="size-6"
                                         >
                                             <path
                                                 stroke-linecap="round"
                                                 stroke-linejoin="round"
-                                                d="M13 5L13 19M13 5L7 11M13 5L19 11"
+                                                d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
+                                            />
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
                                             />
                                         </svg>
                                     </div>
@@ -60,9 +65,7 @@ const Tests = await getCollection("tests");
                                         <span>{test.data.time}</span>
                                     </div>
 
-                                    <span
-                                        class="bg-gradient-to-br to-orange-600 from-orange-700 text-white font-medium px-2 py-0.5 rounded-full"
-                                    >
+                                    <span class="bg-gradient-to-br to-orange-600 from-orange-700 text-white font-medium px-2 py-0.5 rounded-full">
                                         {test.data.dificulty}
                                     </span>
                                 </div>
