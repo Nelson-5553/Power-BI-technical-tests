@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import ContentDetails from "@components/ContentDetails.astro";
+import Summary from "@components/Summary.astro";
+import Instruction from "@components/Instructions.astro";
+import Archive from "@components/Archives.astro";
+import Solutions from "@components/Solutions.astro";
+
+export const getStaticPaths = async () => {
+  const tests = await getCollection("tests");
+  return tests.map(test => ({
+    params: { id: test.id },
+    props: { test }
+  }));
+};
+
+const { test } = Astro.props;
+---
+
+<Layout>
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <ContentDetails test={test} />
+    <Summary/>
+      <Instruction/>
+      <Archive/>
+      <Solutions/>
+  </div>
+</Layout>
+
