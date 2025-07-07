@@ -5,7 +5,7 @@ const { test } = Astro.props;
 <div class="relative z-10 bg-white rounded-xl ">
       <div class="p-6 bg-white rounded-2xl shadow-lg flex flex-col md:flex-row items-start space-x-0 md:space-x-4 space-y-4 md:space-y-0 w-full">
         <!-- Icono -->
-        <div class="flex items-center justify-center w-14 h-14 rounded-lg text-white bg-gradient-to-b from-blue-500 to-blue-600 shadow-lg">
+        <div class="flex items-center justify-center w-14 h-14 rounded-lg text-white bg-gradient-to-b from-orange-500 to-orange-600 shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -33,7 +33,7 @@ const { test } = Astro.props;
           <!-- Tags -->
           <div class="flex flex-wrap gap-2">
             {test.data.mainAdvantage.map((advantage: any) => (
-               <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium px-3 py-1 rounded-full">
+               <span class="bg-gradient-to-r from-orange-500 to-orange-500 text-white text-sm font-medium px-3 py-1 rounded-full">
                 {advantage}
               </span>
             ))}
