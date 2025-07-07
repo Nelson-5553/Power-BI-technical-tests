@@ -12,12 +12,12 @@ const Tests = await getCollection("tests");
                     Tests.map((test) => (
                         <a href={`/details/${test.id}`} class="relative z-10 bg-white rounded-xl block">
                             <div
-                                class={`bg-gradient-to-l from-${test.data.color}-400 to-${test.data.color}-600 rounded-t-xl h-2`}
+                                class="bg-gradient-to-l from-orange-400 to-orange-600 rounded-t-xl h-2"
                             ></div>
                             <div class="max-w-md bg-white rounded-b-xl shadow-lg p-6 space-y-4">
                                 <div class="flex items-center gap-4">
                                     <div
-                                        class={`bg-gradient-to-br to-${test.data.color}-400 from-${test.data.color}-700 p-3 rounded-xl`}
+                                        class="bg-gradient-to-br to-orange-400 from-orange-700 p-3 rounded-xl"
                                     >
                                         <svg
                                             class="w-6 h-6 text-white"
@@ -61,7 +61,7 @@ const Tests = await getCollection("tests");
                                     </div>
 
                                     <span
-                                        class={`bg-gradient-to-br to-${test.data.color}-600 from-${test.data.color}-700 text-white font-medium px-2 py-0.5 rounded-full`}
+                                        class="bg-gradient-to-br to-orange-600 from-orange-700 text-white font-medium px-2 py-0.5 rounded-full"
                                     >
                                         {test.data.dificulty}
                                     </span>

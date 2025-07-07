@@ -3,7 +3,6 @@
     description: Diseñar un modelo de datos y un dashboard interactivo en Power BI que permita analizar el desempeño comercial de la empresa “XYZ”, facilitando la toma de decisiones estratégicas en base a ventas, ingresos, clientes y productos
     dificulty: Basico
     time: 30 min
-    color: orange
     archives: 
         - /resource/empresaxyz.xlsx
     mainAdvantage: 
