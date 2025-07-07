@@ -1,3 +1,7 @@
+---
+const { test } = Astro.props;
+---
+
 <div class="mx-auto w-full py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
   <!-- Tarjeta 1: Duración Estimada -->
    <div class="relative z-10 bg-white rounded-xl ">
@@ -7,7 +11,7 @@
       <path stroke-linecap="round" stroke-linejoin="round"
         d="M12 6v6l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
-    <div class="text-3xl font-bold text-blue-800 mb-2">90 min</div>
+    <div class="text-3xl font-bold text-blue-800 mb-2">{test.data.time}</div>
     <div class="text-blue-600 font-medium">Duración Estimada</div>
   </div>
   </div>
@@ -20,7 +24,7 @@
       <path stroke-linecap="round" stroke-linejoin="round"
         d="M21 12a9 9 0 11-9-9v9h9z" />
     </svg>
-    <div class="text-3xl font-bold text-purple-800 mb-2">Intermedio</div>
+    <div class="text-3xl font-bold text-purple-800 mb-2">{test.data.dificulty}</div>
     <div class="text-purple-600 font-medium">Nivel de Dificultad</div>
   </div>
   </div>

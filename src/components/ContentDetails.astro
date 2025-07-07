@@ -32,15 +32,11 @@ const { test } = Astro.props;
           </p>
           <!-- Tags -->
           <div class="flex flex-wrap gap-2">
-            <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium px-3 py-1 rounded-full">
-              Visualizaciones
-            </span>
-            <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium px-3 py-1 rounded-full">
-              KPIs
-            </span>
-            <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium px-3 py-1 rounded-full">
-              Filtros
-            </span>
+            {test.data.mainAdvantage.map((advantage: any) => (
+               <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium px-3 py-1 rounded-full">
+                {advantage}
+              </span>
+            ))}
           </div>
         </div>
       </div>
