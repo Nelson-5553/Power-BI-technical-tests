@@ -7,7 +7,7 @@ const Tests = await getCollection("tests");
 <div class="max-w-7xl mx-auto px-4 py-12">
     <div class="flex flex-col items-center text-center md:text-left gap-6">
         <div class="flex flex-row items-center gap-4">
-            <div class="grid grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {
                     Tests.map((test) => (
                         <a href={`/details/${test.id}`} class="relative z-10 bg-white rounded-xl block">
@@ -91,7 +91,7 @@ const Tests = await getCollection("tests");
                                         </p>
                                     </div>
 
-                                    <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                    <ul class="list-disc list-inside text-sm text-gray-600 text-left space-y-1">
                                         {test.data.mainAdvantage.map(
                                             (advantage: any) => (
                                                 <li>{advantage}</li>
