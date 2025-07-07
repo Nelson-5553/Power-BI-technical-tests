@@ -20,6 +20,10 @@ const { test } = Astro.props;
 
 <Layout>
   <div class="max-w-7xl mx-auto px-4 py-12">
+    <a href="/" class="inline-flex items-center px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-orange-500 hover:text-white transition duration-300 mb-6 -ml-6">
+  ← Volver al inicio
+</a>
+
     <ContentDetails test={test} />
     <Summary test={test}/>
       <Instruction test={test}/>
